@@ -4,7 +4,15 @@
  * and open the template in the editor.
  */
 package OO_Restaurants;
-
+import java.awt.Component;
+import java.awt.TextField;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
+import javax.swing.UnsupportedLookAndFeelException;
 /**
  *
  * @author asus
@@ -29,39 +37,39 @@ public class OO_Restaurants extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        jtxtCoffee = new javax.swing.JTextField();
+        jtxtCocacola = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jtxtReceipt = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jtxtHamburger = new javax.swing.JTextField();
+        jtxtDriedChicken = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jtxtTotalMeals = new javax.swing.JTextField();
+        jtxtTotalDrinks = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jBReceipt = new javax.swing.JButton();
+        jBTotal = new javax.swing.JButton();
+        jBReset = new javax.swing.JButton();
+        jBExit = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
+        jtxtTax = new javax.swing.JTextField();
+        jtxtSubTotal = new javax.swing.JTextField();
+        jtxtTotal = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -74,21 +82,21 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setText("Cocacola");
 
-        jTextField10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField10.setText("0");
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCoffee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtCoffee.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCoffee.setText("0");
+        jtxtCoffee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                jtxtCoffeeActionPerformed(evt);
             }
         });
 
-        jTextField11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField11.setText("0");
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCocacola.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtCocacola.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCocacola.setText("0");
+        jtxtCocacola.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                jtxtCocacolaActionPerformed(evt);
             }
         });
 
@@ -112,11 +120,11 @@ public class OO_Restaurants extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtxtCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25))
         );
         jPanel1Layout.setVerticalGroup(
@@ -124,18 +132,18 @@ public class OO_Restaurants extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 420, 210));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 420, 290));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 10));
@@ -143,7 +151,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 65)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Restaurant Management System");
+        jLabel1.setText("VQD Hotpot Restaurant");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 10));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -167,9 +175,9 @@ public class OO_Restaurants extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 10));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jtxtReceipt.setColumns(20);
+        jtxtReceipt.setRows(5);
+        jScrollPane1.setViewportView(jtxtReceipt);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -203,21 +211,21 @@ public class OO_Restaurants extends javax.swing.JFrame {
 
         jTextField7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField8.setText("0");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jtxtHamburger.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtHamburger.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtHamburger.setText("0");
+        jtxtHamburger.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jtxtHamburgerActionPerformed(evt);
             }
         });
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField9.setText("0");
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        jtxtDriedChicken.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtDriedChicken.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtDriedChicken.setText("0");
+        jtxtDriedChicken.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                jtxtDriedChickenActionPerformed(evt);
             }
         });
 
@@ -244,8 +252,8 @@ public class OO_Restaurants extends javax.swing.JFrame {
                         .addGap(39, 39, 39)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jtxtHamburger, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxtDriedChicken, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(32, 32, 32))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
@@ -259,10 +267,10 @@ public class OO_Restaurants extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(15, 15, 15)
-                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtxtDriedChicken, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtHamburger, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(144, 144, 144)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -276,13 +284,13 @@ public class OO_Restaurants extends javax.swing.JFrame {
                     .addContainerGap(231, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 420, 210));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 420, 290));
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 10));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtTotalMeals.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtTotalDrinks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
@@ -290,7 +298,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel2.setText("Total of Meals");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("Total Cost of Made");
+        jLabel3.setText("Total Cost of Item");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Total of Drink");
@@ -305,11 +313,11 @@ public class OO_Restaurants extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jtxtTotalDrinks, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxtTotalMeals, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(32, 32, 32))
         );
         jPanel6Layout.setVerticalGroup(
@@ -318,10 +326,10 @@ public class OO_Restaurants extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxtTotalMeals, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtTotalDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -330,39 +338,39 @@ public class OO_Restaurants extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 420, 180));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 420, 180));
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 10));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("Receipt");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBReceipt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jBReceipt.setText("Receipt");
+        jBReceipt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBReceiptActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton2.setText("Total");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jBTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jBTotal.setText("Total");
+        jBTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jBTotalActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("Reset");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jBReset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jBReset.setText("Reset");
+        jBReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jBResetActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setText("Exit");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jBExit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jBExit.setText("Exit");
+        jBExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jBExitActionPerformed(evt);
             }
         });
 
@@ -372,36 +380,36 @@ public class OO_Restaurants extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBReceipt, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBReset, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBExit, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton2))
+                    .addComponent(jBReceipt)
+                    .addComponent(jBReset)
+                    .addComponent(jBExit)
+                    .addComponent(jBTotal))
                 .addGap(32, 32, 32))
         );
 
-        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 900, 120));
+        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 900, 70));
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 10));
 
-        jTextField12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtTax.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jTextField13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtSubTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jTextField14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel15.setText("Tax");
@@ -424,9 +432,9 @@ public class OO_Restaurants extends javax.swing.JFrame {
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jtxtTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                    .addComponent(jtxtSubTotal, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxtTax, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(32, 32, 32))
         );
         jPanel8Layout.setVerticalGroup(
@@ -435,60 +443,146 @@ public class OO_Restaurants extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxtSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 440, 420, 180));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, 420, 180));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jBReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBReceiptActionPerformed
+        
+        int refs= 18043 + (int) (Math.random()*2908);
+        
+        Calendar timer = Calendar.getInstance();
+        timer.getTime();
+        SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
+        tTime.format(timer.getTime());
+        SimpleDateFormat Tdate = new SimpleDateFormat("dd-MM-yyyy");
+        Tdate.format(timer.getTime());
+        
+                jtxtReceipt.append("\tVQD Hotpot Restaurant\n\n" 
+                        + "Reference:\t" + refs
+                        + "\n============================\n" 
+                        + "Meals:\t\t" + jtxtTotalMeals.getText() + "\n\n" 
+                        + "Drinks:\t\t" + jtxtTotalDrinks.getText() + "\n\n"
+                        + "Cost of Items\t\t" + jTextField3.getText() +"\n\n"
+                        + "============================\n\n"
+                        + "Tax:\t\t" + jtxtTax.getText() + "\n\n"
+                        + "Subtotal:\t\t" + jtxtSubTotal.getText() + "\n\n"
+                        + "Total:\t\t" + jtxtTotal.getText() + "\n"
+                        + "============================"
+                        + "\nDate: " + Tdate.format(timer.getTime())
+                        + "\nTime: " + tTime.format(timer.getTime())
+                        + "\n\n\t\t--Thank You--"
+                        );
+    }//GEN-LAST:event_jBReceiptActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jBTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTotalActionPerformed
+        SubClass_Child ItemCost = new SubClass_Child();
+        
+        double iTax, iSubTotal, iTotal;
+        
+        ItemCost.DriedChicken = ItemCost.pDriedChicken * Double.parseDouble(jtxtDriedChicken.getText());
+        ItemCost.Hamburger = ItemCost.pHamburger * Double.parseDouble(jtxtHamburger.getText());
+        ItemCost.Coffee = ItemCost.pCoffee * Double.parseDouble(jtxtCoffee.getText());
+        ItemCost.Cocacola = ItemCost.pCocacola * Double.parseDouble(jtxtCocacola.getText());
+        
+        iSubTotal = ItemCost.GetAmount();
+        iTax = ItemCost.cFindTax(iSubTotal);
+        iTotal = iSubTotal + iTax;
+        
+        String SubTotal = String.format("%.0fK", iSubTotal);
+        jtxtSubTotal.setText (SubTotal);
+        
+        String Tax = String.format("%.0fK", iTax);
+        jtxtTax.setText (Tax);
+        
+        String Total = String.format("%.0fK", iTotal);
+        jtxtTotal.setText (Total);
+        
+        String Meal = String.format("%.0fK", ItemCost.Meals);
+        jtxtTotalMeals.setText (Meal);
+        
+        String Drink = String.format("%.0fK", ItemCost.Drinks);
+        jtxtTotalDrinks.setText (Drink);
+        
+        String TotalCost = String.format("%.0fK",ItemCost.TotalofMD);
+        jTextField3.setText (TotalCost);
+        
+    }//GEN-LAST:event_jBTotalActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jBResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBResetActionPerformed
+        JTextField cleartext = null;
+        
+        for (Component c:jPanel1.getComponents()){
+        if(c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("0");
+        
+        }}
+        
+        for (Component c:jPanel4.getComponents()){
+        if(c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("0");
+        
+        }}
+        
+        for (Component c:jPanel6.getComponents()){
+        if(c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("");
+        
+        }}
+        
+        for (Component c:jPanel8.getComponents()){
+        if(c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("");
+        
+        }}
+        
+        jtxtReceipt.setText(null);
+        
+    }//GEN-LAST:event_jBResetActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void jBExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExitActionPerformed
+        SubClass_Child iExit = new SubClass_Child();
+        iExit.iExitSystem();
+    }//GEN-LAST:event_jBExitActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jtxtDriedChickenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDriedChickenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_jtxtDriedChickenActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jtxtHamburgerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtHamburgerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jtxtHamburgerActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void jtxtCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCoffeeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_jtxtCoffeeActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void jtxtCocacolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCocacolaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_jtxtCocacolaActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException, IllegalAccessException, InstantiationException, UnsupportedLookAndFeelException{
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -511,7 +605,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(OO_Restaurants.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -521,10 +615,10 @@ public class OO_Restaurants extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jBExit;
+    private javax.swing.JButton jBReceipt;
+    private javax.swing.JButton jBReset;
+    private javax.swing.JButton jBTotal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -547,17 +641,17 @@ public class OO_Restaurants extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jtxtCocacola;
+    private javax.swing.JTextField jtxtCoffee;
+    private javax.swing.JTextField jtxtDriedChicken;
+    private javax.swing.JTextField jtxtHamburger;
+    private javax.swing.JTextArea jtxtReceipt;
+    private javax.swing.JTextField jtxtSubTotal;
+    private javax.swing.JTextField jtxtTax;
+    private javax.swing.JTextField jtxtTotal;
+    private javax.swing.JTextField jtxtTotalDrinks;
+    private javax.swing.JTextField jtxtTotalMeals;
     // End of variables declaration//GEN-END:variables
 }
