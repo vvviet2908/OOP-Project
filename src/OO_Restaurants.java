@@ -37,7 +37,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jtxtCoffee = new javax.swing.JTextField();
+        jtxtSprite = new javax.swing.JTextField();
         jtxtCocacola = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -51,8 +51,8 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jtxtHamburger = new javax.swing.JTextField();
-        jtxtDriedChicken = new javax.swing.JTextField();
+        jtxtVegetable = new javax.swing.JTextField();
+        jtxtBeef = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jtxtTotalMeals = new javax.swing.JTextField();
@@ -82,12 +82,12 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setText("Cocacola");
 
-        jtxtCoffee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtxtCoffee.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtxtCoffee.setText("0");
-        jtxtCoffee.addActionListener(new java.awt.event.ActionListener() {
+        jtxtSprite.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtSprite.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtSprite.setText("0");
+        jtxtSprite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtCoffeeActionPerformed(evt);
+                jtxtSpriteActionPerformed(evt);
             }
         });
 
@@ -101,7 +101,7 @@ public class OO_Restaurants extends javax.swing.JFrame {
         });
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel13.setText("Coffee");
+        jLabel13.setText("Sprite");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel14.setText("Drinks");
@@ -116,15 +116,13 @@ public class OO_Restaurants extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(57, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jtxtCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(jtxtCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jtxtSprite, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
         jPanel1Layout.setVerticalGroup(
@@ -132,15 +130,15 @@ public class OO_Restaurants extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxtCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtSprite, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxtCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 420, 290));
@@ -204,33 +202,33 @@ public class OO_Restaurants extends javax.swing.JFrame {
         jLabel8.setText("Meals");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setText("Hamburger");
+        jLabel9.setText("Vegetable");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setText("Total");
 
         jTextField7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jtxtHamburger.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtxtHamburger.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtxtHamburger.setText("0");
-        jtxtHamburger.addActionListener(new java.awt.event.ActionListener() {
+        jtxtVegetable.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtVegetable.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtVegetable.setText("0");
+        jtxtVegetable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtHamburgerActionPerformed(evt);
+                jtxtVegetableActionPerformed(evt);
             }
         });
 
-        jtxtDriedChicken.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtxtDriedChicken.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtxtDriedChicken.setText("0");
-        jtxtDriedChicken.addActionListener(new java.awt.event.ActionListener() {
+        jtxtBeef.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jtxtBeef.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtBeef.setText("0");
+        jtxtBeef.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtDriedChickenActionPerformed(evt);
+                jtxtBeefActionPerformed(evt);
             }
         });
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel11.setText("Dried Chicken");
+        jLabel11.setText("Beef");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -252,8 +250,8 @@ public class OO_Restaurants extends javax.swing.JFrame {
                         .addGap(39, 39, 39)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                    .addComponent(jtxtHamburger, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtxtDriedChicken, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jtxtVegetable, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxtBeef, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(32, 32, 32))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
@@ -267,10 +265,10 @@ public class OO_Restaurants extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(15, 15, 15)
-                .addComponent(jtxtDriedChicken, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtxtBeef, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxtHamburger, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtxtVegetable, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(144, 144, 144)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -494,9 +492,9 @@ public class OO_Restaurants extends javax.swing.JFrame {
         
         double iTax, iSubTotal, iTotal;
         
-        ItemCost.DriedChicken = ItemCost.pDriedChicken * Double.parseDouble(jtxtDriedChicken.getText());
-        ItemCost.Hamburger = ItemCost.pHamburger * Double.parseDouble(jtxtHamburger.getText());
-        ItemCost.Coffee = ItemCost.pCoffee * Double.parseDouble(jtxtCoffee.getText());
+        ItemCost.Beef = ItemCost.pBeef * Double.parseDouble(jtxtBeef.getText());
+        ItemCost.Vegetable = ItemCost.pVegetable * Double.parseDouble(jtxtVegetable.getText());
+        ItemCost.Sprite = ItemCost.pSprite * Double.parseDouble(jtxtSprite.getText());
         ItemCost.Cocacola = ItemCost.pCocacola * Double.parseDouble(jtxtCocacola.getText());
         
         iSubTotal = ItemCost.GetAmount();
@@ -563,17 +561,17 @@ public class OO_Restaurants extends javax.swing.JFrame {
         iExit.iExitSystem();
     }//GEN-LAST:event_jBExitActionPerformed
 
-    private void jtxtDriedChickenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtDriedChickenActionPerformed
+    private void jtxtBeefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtBeefActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtDriedChickenActionPerformed
+    }//GEN-LAST:event_jtxtBeefActionPerformed
 
-    private void jtxtHamburgerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtHamburgerActionPerformed
+    private void jtxtVegetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtVegetableActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtHamburgerActionPerformed
+    }//GEN-LAST:event_jtxtVegetableActionPerformed
 
-    private void jtxtCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCoffeeActionPerformed
+    private void jtxtSpriteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtSpriteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtCoffeeActionPerformed
+    }//GEN-LAST:event_jtxtSpriteActionPerformed
 
     private void jtxtCocacolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCocacolaActionPerformed
         // TODO add your handling code here:
@@ -643,15 +641,15 @@ UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jtxtBeef;
     private javax.swing.JTextField jtxtCocacola;
-    private javax.swing.JTextField jtxtCoffee;
-    private javax.swing.JTextField jtxtDriedChicken;
-    private javax.swing.JTextField jtxtHamburger;
     private javax.swing.JTextArea jtxtReceipt;
+    private javax.swing.JTextField jtxtSprite;
     private javax.swing.JTextField jtxtSubTotal;
     private javax.swing.JTextField jtxtTax;
     private javax.swing.JTextField jtxtTotal;
     private javax.swing.JTextField jtxtTotalDrinks;
     private javax.swing.JTextField jtxtTotalMeals;
+    private javax.swing.JTextField jtxtVegetable;
     // End of variables declaration//GEN-END:variables
 }
