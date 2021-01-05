@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 public class SuperClass_Parent {
     
     public double Beef;
+    public double Seafood;
     public double Vegetable;
     public double Sprite;
     public double Cocacola;
@@ -27,7 +28,7 @@ public class SuperClass_Parent {
     
     public double GetAmount()
     {
-        Meals = Beef + Vegetable;
+        Meals = Beef + Vegetable + Seafood;
         Drinks = Sprite + Cocacola;
         TotalofMD = Meals + Drinks;
         AllTotalofMD = TotalofMD;
@@ -47,6 +48,7 @@ public class SuperClass_Parent {
     //price=========================
     public double pBeef = 30;
     public double pVegetable = 25;
+    public double pSeafood = 35;
     public double pSprite = 10;
     public double pCocacola = 10;
     
