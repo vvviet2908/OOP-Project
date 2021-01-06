@@ -22,6 +22,8 @@ public class OO_Restaurants extends javax.swing.JFrame {
     /**
      * Creates new form OO_Restaurants
      */
+    public double dayProfit=0;
+    public int numOfOrder=0;
     public OO_Restaurants() {
         initComponents();
     }
@@ -533,6 +535,8 @@ public class OO_Restaurants extends javax.swing.JFrame {
         iSubTotal = ItemCost.GetAmount();
         iTax = ItemCost.cFindTax(iSubTotal);
         iTotal = iSubTotal + iTax;
+        dayProfit+=iTotal;
+        numOfOrder++;
         
         String SubTotal = String.format("%.0fK", iSubTotal);
         jtxtSubTotal.setText (SubTotal);
@@ -615,11 +619,27 @@ public class OO_Restaurants extends javax.swing.JFrame {
     }//GEN-LAST:event_jtxtSeafoodActionPerformed
 
     private void jBPayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPayActionPerformed
-        // TODO add your handling code here:
+        SubClass_Child order = new SubClass_Child();
+        order.pay();
     }//GEN-LAST:event_jBPayActionPerformed
 
     private void jBViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBViewActionPerformed
-        // TODO add your handling code here:
+        Calendar timer = Calendar.getInstance();
+        timer.getTime();
+        SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
+        tTime.format(timer.getTime());
+        SimpleDateFormat Tdate = new SimpleDateFormat("dd-MM-yyyy");
+        Tdate.format(timer.getTime());
+        
+        jtxtReceipt.append("\tVQD Hotpot Restaurant\n\n" 
+                        + "\n============================\n" 
+                        + "Number of orders:\t\t" + numOfOrder + "\n\n" 
+                        + "============================\n\n"
+                        + "Profit today:\t\t" + dayProfit + "\n\n"
+                        + "============================"
+                        + "\nDate: " + Tdate.format(timer.getTime())
+                        + "\n\n\t\t--Thank You--"
+                        );
     }//GEN-LAST:event_jBViewActionPerformed
 
     /**
