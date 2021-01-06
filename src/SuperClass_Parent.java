@@ -17,8 +17,11 @@ public class SuperClass_Parent {
     public double Beef;
     public double Seafood;
     public double Vegetable;
+    public double Combo;
     public double Sprite;
     public double Cocacola;
+    public double PannaCotta;
+    public double IceTea;
     
     public double Meals;
     public double Drinks;
@@ -28,8 +31,8 @@ public class SuperClass_Parent {
     
     public double GetAmount()
     {
-        Meals = Beef + Vegetable + Seafood;
-        Drinks = Sprite + Cocacola;
+        Meals = Beef + Vegetable + Seafood + Combo;
+        Drinks = Sprite + Cocacola + PannaCotta + IceTea;
         TotalofMD = Meals + Drinks;
         AllTotalofMD = TotalofMD;
         return AllTotalofMD + Drinks;   
@@ -49,8 +52,11 @@ public class SuperClass_Parent {
     public double pBeef = 30;
     public double pVegetable = 25;
     public double pSeafood = 35;
+    public double pCombo = 2*pBeef+2*pVegetable+2*pSeafood-5;
     public double pSprite = 10;
     public double pCocacola = 10;
+    public double pPannaCotta = 20;
+    public double pIceTea = 5;
     
     //tax===========================
     public double mcTax=0.9;
